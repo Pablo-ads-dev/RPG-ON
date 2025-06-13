@@ -1,7 +1,7 @@
-import { auth, db } from "/includes/fireBaseConfig.js";  // Importa a configuração do Firebase
+import { auth, db } from "./includes/des/fireBaseConfig.js";  // Importa a configuração do Firebase
 import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { collection, query, where, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-import { verifyUserLogged, searchUserId } from "/includes/fireBaseMethods.js"
+import { verifyUserLogged, searchUserId } from "./includes/des/fireBaseMethods.js"
 
 async function searchCreated() {
     //Abaixo, váriaveis que eu utilizo para pegar o usuário logado atual

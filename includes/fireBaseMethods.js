@@ -1,4 +1,4 @@
-import { firebaseConfig, db, app, analytics, auth } from "/includes/fireBaseConfig.js";
+import { firebaseConfig, db, app, analytics, auth } from "./includes/des/fireBaseConfig.js";
 import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 

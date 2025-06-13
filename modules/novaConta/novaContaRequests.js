@@ -1,5 +1,5 @@
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";  // Adiciona a importação do Auth
-import { firebaseConfig, db, app, analytics, auth } from "/includes/fireBaseConfig.js";
+import { firebaseConfig, db, app, analytics, auth } from "./includes/fireBaseConfig.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 async function authenticateCredentials(email, password) {

@@ -5,9 +5,9 @@ let menuStatus = false
 
 
 function incluirHeader(header) {
-    //Incluir o header
+    /./includes/ir o header
     $.ajax({
-        url: "/includes/header.html",
+        url: "./includes/des/header.html",
         success: function (response) {
             $(`#${header}`).append(response)
         }
@@ -15,16 +15,16 @@ function incluirHeader(header) {
 }
 function incluirMenu(menu) {
     $.ajax({
-        url: "/includes/menu.html",
+        url: "./includes/des/menu.html",
         success: function (response) {
             $(`#${menu}`).html(response);
         }
     })
 }
 function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
-    //Incluir o header
+    /./includes/ir o header
     $.ajax({
-        url: "/includes/header.html",
+        url: "./includes/des/header.html",
         success: function (response) {
             $(`#${header}`).html(response)
         }
