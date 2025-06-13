@@ -1,0 +1,48 @@
+<!-- Menu -->
+<aside class="menuDiv text-center">
+
+    <div class="menuHeader">
+        <span class="menuTitle">RPG ON</span>
+        <button class="btn btn-md btnMenu">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <hr class="mb-0 hrDivide">
+    <ul class="listaItensMenu">
+        <li class="listSeparator">Geral</li>
+        <li class="listItem" onclick="redirectInicio()">
+            <a  class="itemListAnchor"><i class=" iconMenu fa fa-home"></i>
+                <span class="nomeItemLista">
+                    Home
+                </span></a>
+        </li>
+        <li class="listItem" onclick="redirectNovoRpg()">
+            <a class="itemListAnchor"><i class=" iconMenu fa fa-plus"></i>
+                <span class="nomeItemLista">
+                    Novo RPG
+                </span></a>
+        </li>
+        <li class="listSeparator">Configurações</li>
+        <li class="listItem">
+            <a class="itemListAnchor"><i class=" iconMenu fa fa-cog"></i> <span class="nomeItemLista">
+                    Configurações </span></a>
+        </li>
+        <li class="listItem">
+            <a class="itemListAnchor" id="btnLogOut"><i class=" iconMenu fa fa-sign-out"></i> <span
+                    class="nomeItemLista">
+                    Sair</span></a>
+        </li>
+    </ul>
+</aside>
+
+
+<script type="module" src="/includes/fireBaseMethods.js" defer></script>
+<script type="module">
+    import { logOut } from "/includes/fireBaseMethods.js"
+    $(document).ready(function () {
+        $("#btnLogOut").on('click', function () {
+            console.log("teste")
+            logOut()
+        })
+    })
+</script>

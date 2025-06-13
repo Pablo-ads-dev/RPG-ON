@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Arquivos CSS Locais -->
+    <link rel="stylesheet" href="/includes/global.css">
+    <link rel="stylesheet" href="/modules/newRpg/newRpg.css">
+    <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
+
+    <title>Novo - RPG ON</title>
+</head>
+
+<body>
+    <div id="menu"></div>
+
+    <div id="content">
+        <div class="portlet">
+            <div class="portlet-title">
+                <h2 class="gradientTitle">Novo RPG</h2>
+            </div>
+            <div class="portlet-body bordasPortletPadding">
+                <form method="POST" id="formNovoRpg">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-10 mt-4">
+                                <div class="form-group">
+                                    <label for="" class="label">Nome da Sessão</label>
+                                    <input type="text" name="nomeSessao" id="nomeSessao" required
+                                        class="form-control inputForm" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-10 mt-4">
+                                <div class="form-group">
+                                    <label for="" class="label">Gênero</label>
+                                    <select name="genero" id="selectGender" required class="form-control inputForm">
+                                        <option value=""></option>
+                                        <option value="terror">Terror</option>
+                                        <option value="acao">Ação</option>
+                                        <option value="arena">Arena</option>
+                                        <option value="medieval">Medieval</option>
+                                        <option value="cp">Cyberpunk</option>
+                                        <option value="fantasia">Fantasia</option>
+                                        <option value="ficcao-cientifica">Ficção Científica</option>
+                                        <option value="steampunk">Steampunk</option>
+                                        <option value="pós-apocaliptico">Pós-apocalíptico</option>
+                                        <option value="super-herois">Super-Heróis</option>
+                                        <option value="misterio">Mistério</option>
+                                        <option value="horror-lovecraftiano">Horror Lovecraftiano</option>
+                                        <option value="guerra">Guerra</option>
+                                        <option value="sobrevivencia">Sobrevivência</option>
+                                        <option value="western">Western</option>
+                                        <option value="mitologico">Mitológico</option>
+                                        <option value="dark-fantasy">Dark Fantasy</option>
+                                        <option value="piratas">Piratas</option>
+                                        <option value="zumbis">Zumbis</option>
+                                        <option value="espionagem">Espionagem</option>
+                                        <option value="samurai">Samurai</option>
+                                        <option value="viking">Viking</option>
+                                        <option value="dungeon-crawler">Dungeon Crawler</option>
+                                        <option value="mecha">Mecha</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-10 mt-4">
+                                <div class="form-group">
+                                    <label for="" class="label">Quantidade de Jogadores</label>
+                                    <select name="selectJogadores" required id="selectJogadores"
+                                        class="form-control inputForm">]
+                                        <option value=""></option>
+                                        <option value="4">4 Jogadores</option>
+                                        <option value="6">6 Jogadores</option>
+                                        <option value="8">8 Jogadores</option>
+                                        <option value="10">10 Jogadores</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segunda parte do HTML -->
+
+                        <div class="col-md-6">
+                            <div class="col-md-12 mt-4 d-flex justify-content-center ">
+                                <img src="/src/img/noImage-removebg-preview.png" class="imgSourceDiv">
+                                </img>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <label for="" class="label">URL da imagem</label>
+                                <div class="input-group">
+                                    <input type="text" value="" name="urlImg" id="urlImg"
+                                        class="form-control inputForm" autocomplete="off">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn closed" id="btnAdd"><i class="fa fa-check eyeIcon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" divBtns col-md-12 mt-5 d-flex justify-content-end">
+                                <button type="button" class="btnRefazer btnPattern btn">Refazer <i
+                                        class="fa fa-refresh"></i></button>
+                                <button class="btnFinalizar btnPattern btn" form="formNovoRpg">Finalizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="loader-hidden">
+        <div class="loader-text">
+            <h2 class="textLoader"></h2>
+        </div>
+    </div>
+
+    <!-- vendor.js -->
+    <script src="/includes/vendor.js"></script>
+
+    <!-- Scripts Locais -->
+
+    <script src="/includes/funcoes.js" defer></script>
+    <script src="/modules/newRpg/newRpg.js" defer></script>
+    <script type="module" src="/includes/fireBaseConfig.js" defer></script>
+    <script type="module" src="/includes/fireBaseMethods.js" defer></script>
+    <script type="module" src="/modules/newRpg/newRpgRequests.js" defer></script>
+
+</body>
+
+</html>

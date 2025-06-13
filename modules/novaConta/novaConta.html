@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/includes/global.css">
+    <link rel="stylesheet" href="/modules/novaConta/novaConta.css">
+
+    <!-- Importacoes  -->
+    <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
+    <title>Criar Conta</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div id="container">
+        <div class="portlet">
+            <div class="portlet-body">
+                <div class="portlet light d-flex justify-content-center p-5">
+                    <div class="novaConta p-5">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-center mb-2">
+                                <img src="/src/img/dados.png" class="imgIcon" alt="">
+                            </div>
+                            <div class="portlet-title d-flex justify-content-center mb-4">
+                                <h2 class="fontApplied loginTitleColor">Nova Conta</h2>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email" class="label ">Nome de Usuário:</label>
+                                <input type="text" class="form-control inputControl" id="nameUser" autocomplete="off">
+                            </div>
+                            <div class="form-group mb-4 mt-1">
+                                <label for="email" class="label ">Email:</label>
+                                <input type="text" class="form-control inputControl" id="email" autocomplete="off">
+                            </div>
+                            <label for="email" class="label">Senha:</label>
+                            <div class="input-group mb-4">
+                                <input type="password" class="form-control inputControl" id="senha">
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark closed" id="btnMostrarSenha"><i class="fa fa-eye-slash eyeIcon "></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="label">Confirmar Senha:</label>
+                                <input type="password" class="form-control inputControl" id="senhaConfirm">
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button id="btnConfirmar" class="btn btnConfirmar">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="loader-hidden">
+        <div class="loader-text">
+            <h2 class="text-light textLoader"></h2>
+        </div>
+    </div>
+    
+    <script src="/includes/vendor.js"></script>
+
+    <!-- importacoes -->
+    <script src="/includes/funcoes.js" defer></script>
+    <script type="module" src="/includes/fireBaseConfig.js" defer></script>
+    <script type="module" src="/includes/fireBaseMethods.js"></script>
+    <script src="/modules/novaConta/novaConta.js" defer></script>
+    <script type="module" src="/modules/novaConta/novaContaRequests.js" defer></script>
+    <!-- importacoes -->
+
+</body>
+
+</html>

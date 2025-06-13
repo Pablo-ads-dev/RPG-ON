@@ -1,0 +1,42 @@
+body{
+    overflow:hidden
+}
+#btnConfirmar{
+    background-color: #7320e7;
+    color: #dedee7;
+}
+#btnConfirmar:hover{
+    background-color: #3c0686;
+    color: #dcdce0;
+}
+
+.anchorType:hover {
+    text-decoration: underline
+}
+
+.loginText {
+    margin-bottom: 30px;
+}
+
+.divLoginHeight {
+    height: 500px;
+    width: 500px;
+}
+
+.novaConta {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E2C;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.loginTitleColor{
+    font-size: 40px;
+}
+
+.eyeIcon{
+    color: #8c54db;
+}
+

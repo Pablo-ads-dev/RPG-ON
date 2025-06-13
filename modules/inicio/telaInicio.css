@@ -1,0 +1,127 @@
+.bordasPortlet {
+    border: 1px solid #35355a;
+    border-radius: 10px;
+    margin: 0px 50px 0px 50px;
+}
+
+.addDiv {
+    margin: 10px 50px 10px 5px;
+}
+
+#content {
+    overflow-y: auto;
+}
+
+.box {
+    min-height: 200px;
+    padding: 30px;
+}
+
+.bordaCardImg {
+    border: 0.5px solid #35355a;
+    border-color: #35355a;
+}
+
+.card {
+    background-color: #151520;
+    border-color: #4e2c7e;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mySessions {
+    background: linear-gradient(90deg, #6A00FF, #9554f7, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    margin: 50px 50px 5px 50px;
+}
+
+.otherSessions {
+    background: linear-gradient(90deg, #6A00FF, #9554f7, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    margin: 10px 50px 15px 50px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.estiloCard {
+    height: 12%;
+    width: 12%;
+}
+
+.imgBorder {
+    height: 80px;
+    border-radius: 5px;
+}
+
+.imgBorder:hover {
+    cursor: zoom-in
+}
+
+.btnAdicionar {
+    margin-left: auto;
+    background-color: #35355a;
+}
+
+.btnAdicionar:hover {
+    background-color: #640ddd;
+}
+
+.btnEditar {
+    background-color: #35355a;
+}
+
+.btnExcluir {
+    background-color: #35355a;
+}
+
+.icon {
+    color: #939096;
+}
+
+#mySessions {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a linha de baixo quando necessário */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards ao início do contêiner */
+    max-width: 100%;
+    /* Ocupa toda a largura possível do contêiner pai */
+}
+
+#otherSessions {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a linha de baixo quando necessário */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards ao início do contêiner */
+    max-width: 100%;
+    /* Ocupa toda a largura possível do contêiner pai */
+}
+
+.emptySessions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divEmpty {
+    display: none;
+}
+
+.imgZoom {
+    width: 100%;
+}
+

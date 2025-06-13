@@ -1,0 +1,31 @@
+.portlet {
+    margin-top: 40px;
+}
+
+.imgSourceDiv {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #35355a;
+    border-radius: 20px;
+}
+
+#btnAdd {
+    color: #8133ee;
+    background-color: #18181a;
+}
+
+#btnAdd:hover {
+    color: #e6e2ec;
+    background-color: #8133ee;
+}
+
+.divBtns {
+    gap: 20px;
+}
+
+.portlet-title {
+    margin: 0px 50px 0px 50px;
+
+}

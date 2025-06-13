@@ -1,0 +1,27 @@
+.novaConta {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E2C;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+body{
+    overflow:hidden
+}
+
+.loginTitleColor{
+    font-size: 35px;
+}
+
+.btnConfirmar{
+    background-color: #7320e7;
+    color: #dedee7;
+}
+.btnConfirmar:hover{
+    background-color: #3c0686;
+    color: #dcdce0;
+}
+.eyeIcon{
+    color: #8c54db;
+}
