@@ -4,7 +4,7 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/fi
 
 async function authenticateCredentials(email, password) {
     const auth = getAuth();
-
+    console.log("caiu aqui de alguma forma");
     createUserWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
             // Usuário criado com sucesso
