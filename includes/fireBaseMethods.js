@@ -18,23 +18,23 @@ function logOut() {
         });
 }
 
-function verifyUserLogged() {
-    onAuthStateChanged(auth, (user) => {
-        const currentPath = window.location.pathname;
+// function verifyUserLogged() {
+//     onAuthStateChanged(auth, (user) => {
+//         const currentPath = window.location.pathname;
 
-        const allowedPaths = [
-            "/modules/login/index.html",
-            "/modules/novaConta/novaConta.html"
-        ];
+//         const allowedPaths = [
+//             "/modules/login/index.html",
+//             "/modules/novaConta/novaConta.html"
+//         ];
 
-        if (!user && !allowedPaths.includes(currentPath)) {
-            setTimeout(() => {
-                window.location.href = "/modules/login/index.html";
-                loader(false, text);
-            }, 1000);
-        }
-    });
-}
+//         if (!user && !allowedPaths.includes(currentPath)) {
+//             setTimeout(() => {
+//                 window.location.href = "/modules/login/index.html";
+//                 loader(false, text);
+//             }, 1000);
+//         }
+//     });
+// }
 
 async function searchUserId() {
     let bdConnection = collection(db, "usuarios");
@@ -52,7 +52,7 @@ async function searchUserId() {
 }
 
 $(document).ready(function () {
-    verifyUserLogged()
+    //verifyUserLogged()
 })
 
 
