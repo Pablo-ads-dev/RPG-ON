@@ -22,7 +22,7 @@ function verifyUserLogged() {
     onAuthStateChanged(auth, (user) => {
         const currentPath = window.location.pathname;
 
-        if (!user && currentPath !== "/modules/login/index.html" && currentPath !== "/modules/novaConta/novaConta.html") {
+        if (!user && currentPath !== "/modules/login/index.html" || currentPath !== "/modules/novaConta/novaConta.html") {
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
