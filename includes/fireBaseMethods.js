@@ -27,7 +27,8 @@ function verifyUserLogged() {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
             }, 1000);
-        } else if (!user && currentPath !== "/modules/novaConta/novaConta.html") {
+        }
+        if (!user && currentPath !== "/modules/novaConta/novaConta.html") {
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
