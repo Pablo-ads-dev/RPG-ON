@@ -1,5 +1,5 @@
 // Importa as funções necessárias do Firebase
-import { auth, db } from "./includes/des/fireBaseConfig.js";  // Importa a configuração do Firebase
+import { auth, db } from "/includes/fireBaseConfig.js";  // Importa a configuração do Firebase
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";  // Importa a função de autenticação
 import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 

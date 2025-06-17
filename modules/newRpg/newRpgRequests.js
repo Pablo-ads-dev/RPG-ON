@@ -1,6 +1,6 @@
-import { auth, db } from "./includes/des/fireBaseConfig.js";  // Importa a configuração do Firebase
+import { auth, db } from "/includes/fireBaseConfig.js";  // Importa a configuração do Firebase
 import { collection, query, where, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-import { verifyUserLogged, searchUserId } from "./includes/des/fireBaseMethods.js"
+import { verifyUserLogged, searchUserId } from "/includes/fireBaseMethods.js"
 
 
 async function criaSessaoRpg(dados) {
