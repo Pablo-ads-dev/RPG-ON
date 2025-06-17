@@ -22,19 +22,16 @@ function verifyUserLogged() {
     onAuthStateChanged(auth, (user) => {
         const currentPath = window.location.pathname;
 
-        if (!user && currentPath !== "/modules/login/index.html") {
+        const allowedPaths = [
+            "/modules/login/index.html",
+            "/modules/novaConta/novaConta.html"
+        ];
+
+        if (!user && !allowedPaths.includes(currentPath)) {
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
             }, 1000);
-        }
-        if (!user && currentPath !== "/modules/novaConta/novaConta.html") {
-            setTimeout(() => {
-                window.location.href = "/modules/login/index.html";
-                loader(false, text);
-            }, 1000);
-        } else {
-            return;
         }
     });
 }
