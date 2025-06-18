@@ -3,6 +3,16 @@
 
 let menuStatus = false
 
+function showAlert(message) {
+    Swal.fire({
+        title: 'Informação!',
+        text: message,
+        icon: 'info',
+    });
+    loader(false);
+    $("#loader").addClass("loader-hidden");
+}
+
 
 function incluirHeader(header) {
     //Incluir o header

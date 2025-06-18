@@ -4,7 +4,6 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/fi
 
 async function authenticateCredentials(email, password) {
     const auth = getAuth();
-    console.log("caiu aqui de alguma forma");
     createUserWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
             // Usuário criado com sucesso
@@ -70,65 +69,36 @@ async function criarCredenciais(email) {
 function verificarCamposCriacao(email, senha, senhaConfi) {
 
     if (!email) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'Preencha o campo "Email"!!',
-            icon: 'info',
-        });
-        loader(false)
-        return false;
-    }
-    if (email.length < 6) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'Email não atende o formato padrão\n @gmail.com/@hotmail.com...',
-            icon: 'info',
-        });
-        loader(false)
-        return false;
-    }
-    if (!senha) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'Preencha o campo "Senha"!!',
-            icon: 'info',
-        });
-        $("#loader").addClass("loader-hidden");
-        loader(false)
-        return false;
-    }
-    if (senha.length < 6) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'A senha precisa ter no mínimo 6 digitos',
-            icon: 'info',
-        });
-        $("#loader").addClass("loader-hidden");
-        loader(false)
-        return false;
-    }
-    if (!senhaConfi) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'Confirme a senha',
-            icon: 'info',
-        });
-        $("#loader").addClass("loader-hidden");
-        loader(false)
-        return false;
-    }
-    if (senhaConfi != senha) {
-        Swal.fire({
-            title: 'Informação!',
-            text: 'Divergência de senhas',
-            icon: 'info',
-        });
-        $("#loader").addClass("loader-hidden");
-        loader(false)
+        showAlert('Preencha o campo "Email"!');
         return false;
     }
 
-    return true
+    if (email.length < 6) {
+        showAlert('Email não atende o formato padrão\n @gmail.com/@hotmail.com...');
+        return false;
+    }
+
+    if (!senha) {
+        showAlert('Preencha o campo "Senha"!');
+        return false;
+    }
+
+    if (senha.length < 6) {
+        showAlert('A senha precisa ter no mínimo 6 dígitos');
+        return false;
+    }
+
+    if (!senhaConfi) {
+        showAlert('Confirme a senha');
+        return false;
+    }
+
+    if (senhaConfi !== senha) {
+        showAlert('Divergência de senhas');
+        return false;
+    }
+
+    return true;
 }
 
 $(document).ready(function () {

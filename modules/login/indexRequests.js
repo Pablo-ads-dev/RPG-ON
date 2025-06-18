@@ -83,7 +83,7 @@ async function login() {
             icon: 'error',
         });
         loader(false, text)
-
+        console.log(error);
     }
 }
 
@@ -94,10 +94,10 @@ $(document).ready(function () {
         login()
     });
 
-    $(document).on('keydown', "#btnConfirmar",  function (e) {
+    $(document).on('keydown', "#btnConfirmar", function (e) {
         if (e.key === "Enter") {
             e.preventDefault(); // Evita submissão do formulário ou outros comportamentos padrão
-             login();
+            login();
         }
     });
 });
