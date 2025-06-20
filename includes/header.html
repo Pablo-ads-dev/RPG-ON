@@ -1,23 +1,20 @@
 <!-- Header -->
 
 <header id="header">
-    <div class="row d-flex align-items-center">
+    <div class="HeaderJustification">
         <!-- Botão do menu com ícone -->
-        <button class="col-md-1 p-0 divIcon" id="menuToggle">
+        <button class="p-0 m-0 divIcon" id="menuToggle">
             <img src="/src/img/dados.png" class="imgIcon" alt="Icone do Menu">
         </button>
-
         <!-- Título principal -->
-        <div class="col-md-8 p-0">
-            <h3 class="m-0 p-2 titleColor fontApplied">Rpg On</h3>
-        </div>
-
+        <h3 class="m-0 titleColor fontApplied">RpgOn</h3>
         <!-- Links de navegação -->
-        <nav class="col-md-3 d-flex justify-content-between">
-            <p class="subtitleColor m-0 anchorType fontApplied">Sobre</p>
-            <p class="subtitleColor m-0 anchorType fontApplied">Contato</p>
-            <p class="subtitleColor m-0 anchorType fontApplied" onclick="redirecCriarConta()">criar conta</p>
-            <p class="subtitleColor m-0 anchorType fontApplied" onclick="redirecLogin()">login</p>
-        </nav>
+        <div class="d-flex align-items-center optionsHeader" style="gap: 30px; margin-left: auto;">
+            <p class="subtitle m-0 anchorType">Campanhas</p>
+            <p class="subtitle m-0 anchorType ">Contato</p>
+            <button class="btn btnDefaultRed anchorType" onclick="redirecLogin()">
+                Registrar
+            </button>
+        </div>
     </div>
 </header>
