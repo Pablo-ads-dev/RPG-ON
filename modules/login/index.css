@@ -1,11 +1,13 @@
-body{
-    overflow:hidden
+body {
+    overflow: hidden
 }
-#btnConfirmar{
+
+#btnConfirmar {
     background-color: #7320e7;
     color: #dedee7;
 }
-#btnConfirmar:hover{
+
+#btnConfirmar:hover {
     background-color: #3c0686;
     color: #dcdce0;
 }
@@ -24,16 +26,21 @@ body{
 }
 
 .novaConta {
-    width: 55vh;
-    height: 60vh;
     background-color: #100b0b;
     border-radius: 20px;
-    padding: 5vh;
+    padding: 10vh 6vh 10vh 6vh;
     background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
 }
 
-.eyeIcon{
-    color: #8c54db;
+body {
+    background-image: url('https://wallpapercave.com/wp/wp12696363.jpg');
+    background-size: cover;
+    /* Preenche toda a tela, mantendo proporção */
+    background-repeat: no-repeat;
+    /* Não repete */
+    background-position: center;
 }
 
-
+.eyeIcon {
+    color: #8c54db;
+}
