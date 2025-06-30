@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #151520;
+    background-color: #110e0d;
     height: 100vh;
 }
 
@@ -56,8 +56,8 @@ ESTILIZAÇÃO CONTENT */
 }
 
 #header {
-    background-color: #151520;
-    box-shadow: 0px 0.5px 0px 0px #35355a;
+    background-color: #130f0c;
+    box-shadow: 0px 0.5px 0px 0px rgb(68 64 60 / 0.5);
 }
 
 .divIcon {
@@ -129,6 +129,8 @@ ESTILIZAÇÃO CONTENT */
 
 .loginTitleColor {
     color: rgba(185, 28, 28, 0.9);
+    font-size: 55px;
+
 }
 
 /* Adicione um deslocamento para o conteúdo principal */
@@ -378,6 +380,41 @@ INPUTS E LABELS */
     border-color: #5c13c2;
 }
 
+.inputContainer {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px rgb(75 85 99 / 0.6) solid;
+    padding: .375rem .75rem;
+    transition: border-color 0.3s;
+}
+
+/* Foco no container se qualquer filho tiver foco */
+.inputContainer:focus-within {
+    border-bottom: 1px rgb(239 68 68 / var(--tw-border-opacity, 1)) solid;
+}
+
+.inputContainer i {
+    margin-right: 0.5rem;
+    color: #aaa;
+    font-size: 1rem;
+}
+
+.inputPersonalizado {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    outline: none;
+    color: #fff;
+    padding: 0;
+    /* tira padding extra já que está no container */
+}
+
+
 
 /* SCROLLLBRAR STYLES */
 
@@ -411,6 +448,7 @@ INPUTS E LABELS */
 }
 
 
+
 /* ADDONS */
 .eyeIcon {
     color: #8c54db;
@@ -428,6 +466,20 @@ INPUTS E LABELS */
 }
 
 .btnDefaultRed:hover {
+    background-color: rgba(228, 14, 14, 0.9);
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.btnDefaultRedGrande {
+    background-color: rgba(185, 28, 28, 0.9);
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 18px;
+    width: 250px;
+}
+
+.btnDefaultRedGrande:hover {
     background-color: rgba(228, 14, 14, 0.9);
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
@@ -474,4 +526,11 @@ INPUTS E LABELS */
 .modal-body {
     border: 1px solid #35355a;
     background-color: #151520;
+}
+
+
+/* TEXTO */
+
+.textPattern {
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
