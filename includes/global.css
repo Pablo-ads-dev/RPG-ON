@@ -15,6 +15,7 @@ body {
     padding: 0;
     height: 100%;
 }
+
 body {
     background-color: #110e0d;
     background-size: cover;
@@ -63,10 +64,12 @@ ESTILIZAÇÃO CONTENT */
     align-items: center;
 }
 
-#header {
-    background-color: #100b0b;
+#headerStyle {
+    background-color: rgba(15, 15, 15, 0.90);
     box-shadow: 0px 0.5px 0px 0px rgb(68 64 60 / 0.5);
-    background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+    background-image: url('https://www.transparenttextures.com/patterns/stone-wall.png');
+    backdrop-filter: blur(3px);
+
 }
 
 .divIcon {

@@ -56,8 +56,8 @@ async function login() {
     let text = "Aguarde"
     loader(true, text)
 
-    let emailInput = $('#emailInput').val().trim();
-    let senhaInput = $('#senhaInput').val().trim();
+    let emailInput = $('#email').val().trim();
+    let senhaInput = $('#password').val().trim();
 
     // Verifica se os campos estão preenchidos
     if (verificarCampos(emailInput, senhaInput) == false) {

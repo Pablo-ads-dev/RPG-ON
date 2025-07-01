@@ -39,7 +39,7 @@
                             <label for="" class="textPattern">Email</label>
                             <div class="inputContainer">
                                 <i class="fa fa-user"></i>
-                                <input type="text" class="inputPersonalizado" />
+                                <input type="text" id="email" class="inputPersonalizado" autocomplete="off" />
                             </div>
                         </div>
                     </div>
@@ -48,12 +48,12 @@
                             <label for="" class="textPattern">Senha</label>
                             <div class="inputContainer">
                                 <i class="fa fa-lock"></i>
-                                <input type="password" class="inputPersonalizado" />
+                                <input type="password" id="password" class="inputPersonalizado" autocomplete="off"  />
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mt-4 text-center">
-                        <button class="btnDefaultRedGrande btn anchorType" onclick="login()">Confirmar</button>
+                        <button class="btnDefaultRedGrande btn anchorType" id="btnConfirmar">Confirmar</button>
                     </div>
                     <div class="col-md-12 text-center mt-3 d-flex justify-content-center">
                         <p class="textPattern ">
