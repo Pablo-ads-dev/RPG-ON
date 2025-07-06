@@ -28,9 +28,6 @@ function verifyUserLogged() {
         ];
 
         if (!user && (currentPath != "/modules/login/index.html" || currentPath != "/modules/login/index.html")) {
-            console.log(currentPath);
-            console.log(allowedPaths);
-            console.log("caiu aq");
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
@@ -53,10 +50,6 @@ async function searchUserId() {
     });
     return userId;
 }
-
-$(document).ready(function () {
-    verifyUserLogged()
-})
 
 
 export { verifyUserLogged, searchUserId, logOut }
