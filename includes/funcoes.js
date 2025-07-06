@@ -13,16 +13,6 @@ function showAlert(message) {
     $("#loader").addClass("loader-hidden");
 }
 
-
-function incluirHeader(header) {
-    //Incluir o header
-    $.ajax({
-        url: "/includes/header.html",
-        success: function (response) {
-            $(`#${header}`).append(response)
-        }
-    })
-}
 function incluirMenu(menu) {
     $.ajax({
         url: "/includes/menu.html",
@@ -31,28 +21,13 @@ function incluirMenu(menu) {
         }
     })
 }
-function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
-    //Incluir o header
-    $.ajax({
-        url: "/includes/header.html",
-        success: function (response) {
-            $(`#${header}`).html(response)
-        }
-    })
-}
 
 function redirecCriarConta() {
-    loader(true, text = "Aguarde...")
-    setTimeout(() => {
-        window.location.href = "/modules/novaConta/novaConta.html";
-    }, 1000);
+    window.location.href = "/modules/novaConta/novaConta.html";
 }
 
 function redirecLogin() {
-    loader(true, text = "Aguarde...")
-    setTimeout(() => {
-        window.location.href = "/modules/login/index.html";
-    }, 1000);
+    window.location.href = "/modules/login/index.html";
 }
 
 function redirectInicio() {

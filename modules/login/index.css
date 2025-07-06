@@ -6,19 +6,10 @@ body {
     text-decoration: underline
 }
 
-.loginText {
-    margin-bottom: 30px;
-}
-
-.divLoginHeight {
-    height: 500px;
-    width: 500px;
-}
-
-.novaConta {
+.divContainer {
     background-color: rgba(15, 15, 15, 0.90);
     border-radius: 20px;
-    padding: 10vh 6vh 10vh 6vh;
+    padding: 6vh 6vh 10vh 6vh;
     background-image: url('https://www.transparenttextures.com/patterns/stone-wall.png');
     backdrop-filter: blur(3px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
@@ -26,7 +17,7 @@ body {
 }
 
 body {
-    background-image: url('https://wallpapercave.com/wp/wp12696363.jpg');
+    background-image: url('/src/backgroundLogin.webp');
     background-size: cover;
     /* Preenche toda a tela, mantendo proporção */
     background-repeat: no-repeat;

@@ -1,7 +1,5 @@
 
 $(document).ready(function () {
-    incluirHeader("header")
-    loader(false)
 
     $("#btnMostrarSenha").click(function(){
         let inputSenha = $("#senhaInput")

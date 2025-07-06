@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    incluirHeader("header");
     $("#btnMostrarSenha").click(function () {
         let inputSenha = $("#senha")
         let eye = $(".eyeIcon")

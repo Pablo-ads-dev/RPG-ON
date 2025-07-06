@@ -1,27 +1,48 @@
-.novaConta {
-    display: flex;
-    justify-content: center;
-    background-color: #1E1E2C;
-    width: 500px;
-    height: auto;
+.divContainer {
+    background-color: rgba(15, 15, 15, 0.90);
     border-radius: 20px;
-}
-body{
-    overflow:hidden
-}
-
-.loginTitleColor{
-    font-size: 35px;
+    padding: 6vh 6vh 10vh 6vh;
+    background-image: url('https://www.transparenttextures.com/patterns/stone-wall.png');
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
 }
 
-.btnConfirmar{
-    background-color: #7320e7;
-    color: #dedee7;
+/* body {
+    overflow: hidden
 }
-.btnConfirmar:hover{
-    background-color: #3c0686;
-    color: #dcdce0;
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.eyeIcon{
-    color: #8c54db;
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    backdrop-filter: blur(4px);
+} */
+
+
+body {
+    background-image: url('/src/backgroundCriarConta.jpg');
+    background-size: cover;
+    /* Preenche toda a tela, mantendo proporção */
+    background-repeat: no-repeat;
+    /* Não repete */
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* escurece levemente a imagem */
+    z-index: -1;
+    backdrop-filter: blur(4px);
 }

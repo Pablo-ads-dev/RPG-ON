@@ -22,14 +22,30 @@
 </head>
 
 <body class="backgroundColor">
-    <div id="header"></div>
-    <!-- senhaInput -->
-    <!-- emailInput -->
+
+    <header id="headerStyle">
+        <div class="HeaderJustification">
+            <!-- Botão do menu com ícone -->
+            <button class="p-0 m-0 divIcon" id="menuToggle">
+                <img src="/src/img/dados.png" class="imgIcon" alt="Icone do Menu">
+            </button>
+            <!-- Título principal -->
+            <h3 class="m-0 titleColor fontApplied">RpgOn</h3>
+            <!-- Links de navegação -->
+            <div class="d-flex align-items-center optionsHeader" style="gap: 30px; margin-left: auto;">
+                <p class="subtitle m-0 anchorType">Campanhas</p>
+                <p class="subtitle m-0 anchorType ">Contato</p>
+                <button class="btn btnDefaultRed anchorType" onclick="redirecLogin()">
+                    Registrar
+                </button>
+            </div>
+        </div>
+    </header>
 
     <div id="container">
         <div class="portlet d-flex justify-content-center p-5">
             <div class="row">
-                <div class="novaConta">
+                <div class="divContainer">
                     <div class="col-md-12 text-center">
                         <h1 class="fontApplied loginTitleColor bold">Portal Da Taverna</h1>
                         <p class="textPattern">Bem-Vindo de volta, aventureiro!!</p>
@@ -48,7 +64,7 @@
                             <label for="" class="textPattern">Senha</label>
                             <div class="inputContainer">
                                 <i class="fa fa-lock"></i>
-                                <input type="password" id="password" class="inputPersonalizado" autocomplete="off"  />
+                                <input type="password" id="password" class="inputPersonalizado" autocomplete="off" />
                             </div>
                         </div>
                     </div>
@@ -57,7 +73,8 @@
                     </div>
                     <div class="col-md-12 text-center mt-3 d-flex justify-content-center">
                         <p class="textPattern ">
-                            <span class="anchorType">Forgot your Secret Word?</span> | <span class="anchorType"> Register with the Guild </span>
+                            <span class="anchorType">Esqueceu a senha?</span> | <span class="anchorType"
+                                onclick="redirecCriarConta()"> Registrar-se na guilda </span>
                         </p>
                     </div>
                 </div>
@@ -75,8 +92,7 @@
     <script src="/includes/vendor.js"></script>
 
     <!-- Importacoes  -->
-    <script type="module" src="/includes/fireBaseConfig.js" defer></script>
-    <script type="module" src="/includes/fireBaseMethods.js"></script>
+    <script type="module" src="/includes/vendorBd.js" defer></script>
 
     <script src="/modules/login/index.js" defer></script>
     <script src="/includes/funcoes.js" defer></script>
