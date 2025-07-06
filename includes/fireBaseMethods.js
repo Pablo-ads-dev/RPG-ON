@@ -21,12 +21,15 @@ function logOut() {
 function verifyUserLogged() {
     onAuthStateChanged(auth, (user) => {
         const currentPath = window.location.pathname;
+        console.log(currentPath);
         const allowedPaths = [
             "/modules/login/index.html",
             "/modules/novaConta/novaConta.html"
         ];
 
         if (!user && !allowedPaths.includes(currentPath)) {
+            console.log(currentPath);
+            console.log(allowedPaths);
             console.log("caiu aq");
             return;
             setTimeout(() => {
