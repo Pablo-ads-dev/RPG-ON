@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $("#btnMostrarSenha").click(function () {
         let inputSenha = $("#senha")
         let eye = $(".eyeIcon")

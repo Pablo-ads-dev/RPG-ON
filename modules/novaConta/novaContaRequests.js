@@ -102,6 +102,7 @@ function verificarCamposCriacao(email, senha, senhaConfi) {
 }
 
 $(document).ready(function () {
+    
     $("#btnConfirmar").click(function (e) {
         e.stopPropagation();
         let email = $("#email").val().trim();

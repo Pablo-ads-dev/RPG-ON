@@ -27,6 +27,8 @@ function verifyUserLogged() {
         ];
 
         if (!user && !allowedPaths.includes(currentPath)) {
+            console.log("caiu aq");
+            return;
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);

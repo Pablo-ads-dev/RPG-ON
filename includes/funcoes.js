@@ -56,8 +56,6 @@ function loader(parameter, texto) {
 }
 
 
-
-
 //Para fazer mostrar os itens da side nav Menu
 
 
