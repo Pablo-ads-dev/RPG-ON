@@ -27,11 +27,10 @@ function verifyUserLogged() {
             "/modules/novaConta/novaConta.html"
         ];
 
-        if (!user && !allowedPaths.includes(currentPath)) {
+        if (!user && (currentPath != "/modules/login/index.html" || currentPath != "/modules/login/index.html")) {
             console.log(currentPath);
             console.log(allowedPaths);
             console.log("caiu aq");
-            return;
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);
