@@ -25,12 +25,12 @@ body {
 
 /* ESTILIZAÇÃOI DO SWAl */
 .swal2-popup {
-    background-color: #1E1E2C;
+    background-color: #110e0d;
 
 }
 
 .swal2-title {
-    color: #812ff3;
+    color: rgba(185, 28, 28, 0.9);
 }
 
 .swal2-html-container {

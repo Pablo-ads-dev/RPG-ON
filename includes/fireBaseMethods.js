@@ -21,13 +21,7 @@ function logOut() {
 function verifyUserLogged() {
     onAuthStateChanged(auth, (user) => {
         const currentPath = window.location.pathname;
-        console.log(currentPath);
-        const allowedPaths = [
-            "/modules/login/index.html",
-            "/modules/novaConta/novaConta.html"
-        ];
-
-        if (!user && (currentPath != "/modules/login/index.html" || currentPath != "/modules/login/index.html")) {
+        if (!user) {
             setTimeout(() => {
                 window.location.href = "/modules/login/index.html";
                 loader(false, text);

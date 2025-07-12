@@ -1,8 +1,4 @@
 // Carregar jQuery
-const scriptJquery = document.createElement("script");
-scriptJquery.src = "https://code.jquery.com/jquery-3.7.1.min.js";
-scriptJquery.defer = true;
-document.head.appendChild(scriptJquery);
 
 // Carregar SweetAlert
 const scriptSweetAlert = document.createElement("script");

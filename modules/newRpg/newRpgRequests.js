@@ -41,6 +41,7 @@ async function criaSessaoRpg(dados) {
     }
 }
 $(document).ready(function () {
+    verifyUserLogged();
     $(document).on("submit", "#formNovoRpg", function (e) {
         e.preventDefault();
         let dados = $(this).serialize();

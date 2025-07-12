@@ -45,7 +45,8 @@
                         <div class="form-group mb-3">
                             <label for="email" class="textPattern">Nome de Usuário:</label>
                             <div class="inputContainer">
-                                <input type="text" class="inputPersonalizado" id="nameUser" autocomplete="off">
+                                <i class="fa fa-user"></i>
+                                <input type="text" class="inputPersonalizado" id="username" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -53,6 +54,7 @@
                         <div class="form-group mb-4 mt-1">
                             <label for="email" class="textPattern">Email:</label>
                             <div class="inputContainer">
+                                <i class="fa fa-envelope"></i>
                                 <input type="text" class="inputPersonalizado" id="email" autocomplete="off">
                             </div>
                         </div>
@@ -61,11 +63,12 @@
                         <div class="form-group mb-4 mt-1">
                             <label for="email" class="textPattern">Senha:</label>
                             <div class="inputContainer">
+                                <i class="fa fa-lock-open"></i>
                                 <input type="password" class="inputPersonalizado" id="senha">
-                                <!-- <div class="input-group-append">
-                                            <button class="btn btn-dark closed" id="btnMostrarSenha"><i
-                                                    class="fa fa-eye-slash eyeIcon "></i></button>
-                                        </div> -->
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark closed btn-sm" id="btnMostrarSenha">
+                                        <i class="fa fa-eye-slash eyeIcon m-0"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,13 +76,14 @@
                         <div class="form-group">
                             <label for="email" class="textPattern">Confirmar Senha:</label>
                             <div class="inputContainer">
+                                <i class=" fa fa-lock"></i>
                                 <input type="password" class="inputPersonalizado" id="senhaConfirm">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="d-flex justify-content-center mt-4">
-                            <button id="btnConfirmar" class="btnDefaultRedGrande btn anchorType">Criar Conta</button>
+                            <button id="btnConfirmar" class="btnDefaultRedGrande btn btn-lg anchorType">Criar Conta</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +96,8 @@
             <h2 class="text-light textLoader"></h2>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/includes/vendor.js"></script>
 
     <!-- importacoes -->

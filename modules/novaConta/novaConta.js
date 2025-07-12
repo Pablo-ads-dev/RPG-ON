@@ -7,7 +7,6 @@ $(document).ready(function () {
             inputSenha.attr("type", "text")
             $(this).removeClass("closed").addClass("open")
             eye.removeClass("fa-eye-slash").addClass("fa-eye")
-
         } else {
             inputSenha.attr("type", "password")
             $(this).removeClass("open ").addClass("closed")
