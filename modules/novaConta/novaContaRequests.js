@@ -83,6 +83,7 @@ function validarCampo(valor, tipoDeValidacao) {
             }
             break;
         case 'username':
+            let raw = valor.trim();
             let clean = valor.replace(/[^\w]/g, '');
             if (clean !== raw) {
                 showAlert('Foram removidos caracteres inválidos do nome de usuário');
@@ -97,7 +98,6 @@ function validarCampo(valor, tipoDeValidacao) {
             console.warn('Tipo de validação não suportado:', tipoDeValidacao);
             valido = false;
     }
-    console.log(valido);
     return valido;
 }
 
