@@ -37,6 +37,16 @@ body {
     color: #e6e2ec;
 }
 
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
 /* 
 ESTILIZAÇÃO CONTENT */
 .overlay {
@@ -115,20 +125,6 @@ ESTILIZAÇÃO CONTENT */
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
 
-/* ESTILIZAÇÃO DO MENU */
-#menu {
-    padding-top: 1em;
-    height: 100%;
-    width: 6%;
-    background-color: #171724;
-    box-shadow: 0.2px 0px 0px 0px #1a1a24;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: width 0.3s ease-in-out, 0.5s;
-    z-index: 1000;
-}
-
 .btnMenu {
     color: #8133ee;
     background-color: #35355a;
@@ -145,107 +141,15 @@ ESTILIZAÇÃO CONTENT */
 
 }
 
-/* Adicione um deslocamento para o conteúdo principal */
+
+
 #content {
-    overflow-x: hidden;
-    margin-left: 5%;
-    margin-right: 5%;
-    /* O mesmo valor de largura do menu */
+    width: 100%;
+    margin-left: 15%;   /* desloca o conteúdo */
     transition: margin-left 0.5s ease-in-out;
-    /* Alinha com a animação do menu */
-}
-
-/* Estilos para os itens do menu */
-.listItem>a {
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
-    color: white;
-    /* Define a cor do texto */
-    cursor: pointer;
-}
-
-.listaItensMenu {
-    list-style-type: none;
-    /* Remove o estilo padrão da lista */
-    margin: 0;
-    /* Remove margens */
-    padding: 0;
-    /* Remove preenchimentos */
-}
-
-.listItem {
-    cursor: pointer;
-
-    padding-top: 10px;
-    /* Espaçamento superior */
-    padding-bottom: 10px;
-    /* Espaçamento inferior */
-    text-align: center;
-    /* Centraliza os itens */
-}
-
-.listSeparator {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: start;
-    margin-left: 10px;
-    color: #767477;
-    display: none;
-}
-
-.itemListAnchor {
-    cursor: pointer;
-}
-
-.itemListAnchor>i {
-    color: #7930e0;
-}
-
-.hrDivide {
-    color: #35355a;
-}
-
-.listItem:hover {
-    background-color: #6A00FF;
-    /* Cor de fundo ao passar o mouse */
-}
-
-.listItem:hover i {
-    color: #e6e2ec;
-    /* Cor do ícone ao passar o mouse */
-}
-
-.listItem:hover span {
-    color: #e6e2ec;
-    /* Cor do ícone ao passar o mouse */
-}
-
-#menu.openMenuSide {
-    width: 15%;
-    /* largura expandida */
-}
-
-.itemAlign {
-    display: flex;
-    padding-left: 15px;
-}
-
-.menuHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menuTitle {
-    display: none;
-    background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
-    background-size: 300% auto;
-    /* Amplia o gradiente */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientScroll 8s linear infinite;
-    /* Animação contínua */
+    padding: 2rem;
+    overflow-y: auto;
+    overflow-x: visible;
 }
 
 /* Animação para mover o gradiente */
@@ -259,13 +163,6 @@ ESTILIZAÇÃO CONTENT */
     }
 }
 
-.menuHeader .menuTitle {
-    margin-right: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    /* Ajuste a cor do texto conforme o tema */
-}
-
 .iconMenu {
     font-size: 14px;
 }
@@ -274,18 +171,28 @@ ESTILIZAÇÃO CONTENT */
     font-family: "Almendra SC", serif;
 }
 
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-
-/* ESTILIZAÇÃO ITENS DO MENU */
-.nomeItemLista {
-    display: none;
-    color: #8337ee;
+.menuTitle {
+    background: linear-gradient(90deg,
+            rgba(120, 0, 0, 0.9),
+            rgba(185, 28, 28, 0.95),
+            rgba(220, 38, 38, 0.9));
+    background-size: 300% auto;
+    /* Amplia o gradiente */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: bold;
 }
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
 
 /* ESTILIZAÇÃO ITENS UNICOS */
 .anchorType {
@@ -299,8 +206,6 @@ ESTILIZAÇÃO CONTENT */
 .sizeTextNormal {
     font-size: 50px;
 }
-
-
 
 
 /* --------------------------------------------------- */
@@ -431,44 +336,23 @@ INPUTS E LABELS */
 /* SCROLLLBRAR STYLES */
 
 ::-webkit-scrollbar-track {
-    background-color: #151520;
+    background: rgba(255, 255, 255, 0.05);
+    ;
 }
 
 ::-webkit-scrollbar {
     width: 9px;
-    background: #5c13c2;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #35355a;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-
-/* TITULOS */
-.simpleTitle {
-    color: #7930e0;
-}
-
-.gradientTitle {
-    background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
-    background-size: 300% auto;
-    /* Amplia o gradiente */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientScroll 8s linear infinite;
-}
-
-
-
-/* ADDONS */
-.eyeIcon {
-    color: #8c54db;
-}
 
 /* BUTTONS */
 
-.btnDefaultRed {
+.button-default-red {
     background-color: rgba(185, 28, 28, 0.9);
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
     font-weight: 600;
@@ -477,44 +361,60 @@ INPUTS E LABELS */
 
 }
 
-.btnDefaultRed:hover {
+.button-default-red:hover {
     background-color: rgba(228, 14, 14, 0.9);
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 
-.btnDefaultRedGrande {
+.button-default-red-lg {
     background-color: rgba(185, 28, 28, 0.9);
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
     font-weight: 600;
     text-decoration: none !important;
     font-size: 18px;
-    width: 250px;
+    width: 15em;
 }
 
-.btnDefaultRedGrande:hover {
+.button-default-red-lg:hover {
     background-color: rgba(228, 14, 14, 0.9);
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 
-.btnPattern {
-    color: #8133ee;
-    background-color: #18181a;
+.button-pattern-grey {
+    background-color: rgb(68 64 60 / 0.8);
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 18px;
 }
 
-.btnPattern:hover {
-    color: #e6e2ec;
-    background-color: #8133ee;
+.button-pattern-grey-lg {
+    background-color: rgb(68 64 60 / 0.8);
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+    font-weight: 600;
+    text-decoration: none !important;
+    font-size: 18px;
+    width: 15em;
 }
 
+.button-pattern-grey:hover {
+    background-color: rgba(54, 54, 54, 0.9);
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.button-pattern-grey-lg:hover {
+    background-color: rgba(54, 54, 54, 0.9);
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
 
 /* BORDAS */
-.bordasPortlet {
+.border-portlet {
     border: 1px solid #35355a;
     border-radius: 10px;
     margin: 0px 50px 0px 50px;
 }
 
-.bordasPortletPadding {
+.border-portlet-padding {
     border: 1px solid #35355a;
     border-radius: 10px;
     padding: 40px;
@@ -543,6 +443,10 @@ INPUTS E LABELS */
 
 /* TEXTO */
 
-.textPattern {
+.text-pattern {
     color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.white-title {
+    color: #fff;
 }

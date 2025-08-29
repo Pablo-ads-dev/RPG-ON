@@ -1,47 +1,128 @@
 <!-- Menu -->
-<aside class="menuDiv text-center">
-
-    <div class="menuHeader">
-        <span class="menuTitle">RPG ON</span>
-        <button class="btn btn-md btnMenu">
-            <i class="fa fa-bars"></i>
-        </button>
-    </div>
-    <hr class="mb-0 hrDivide">
-    <ul class="listaItensMenu">
-        <li class="listSeparator">Geral</li>
-        <li class="listItem" onclick="redirectInicio()">
-            <a  class="itemListAnchor"><i class=" iconMenu fa fa-home"></i>
-                <span class="nomeItemLista">
-                    Home
-                </span></a>
+<aside>
+    <ul class="menuList list-group">
+        <div class="menuHeader">
+            <span class="menuTitle">RPG ON</span>
+            <button class="btn button-default-red" id="toggleNav">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <hr class="mb-0">
+        <li class="list-group-item">
+            <a href="/modules/inicio/inicio.html" class="no-style"> <i class="fa fa-home list-icon"></i>
+                <span class="menu-item-text">Home</span>
+            </a>
         </li>
-        <li class="listItem" onclick="redirectNovoRpg()">
-            <a class="itemListAnchor"><i class=" iconMenu fa fa-plus"></i>
-                <span class="nomeItemLista">
-                    Novo RPG
-                </span></a>
+        <li class="list-group-item">
+            <a href="/modules/newRpg/newRpg.html" class="no-style">
+                <i class="fa fa-solid fa-puzzle-piece list-icon"></i>
+                <span class="menu-item-text">New Session</span>
+            </a>
         </li>
-        <li class="listSeparator">Configurações</li>
-        <li class="listItem">
-            <a class="itemListAnchor"><i class=" iconMenu fa fa-cog"></i> <span class="nomeItemLista">
-                    Configurações </span></a>
-        </li>
-        <li class="listItem">
-            <a class="itemListAnchor" id="btnLogOut"><i class=" iconMenu fa fa-sign-out"></i> <span
-                    class="nomeItemLista">
-                    Sair</span></a>
+        <li class="list-group-item">
+            <a href="/modules/newRpg/newRpg.html" class="no-style">
+                <i class="fa fa-solid fa-gear list-icon"></i>
+                <span class="menu-item-text">Configurations</span>
+            </a>
         </li>
     </ul>
 </aside>
 
+<style>
+    /* ESTILIZAÇÃO DO MENU */
+    .no-style {
+        text-decoration: none;
+    }
+
+    #menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 15%;
+        /* largura fixa */
+        height: 100vh;
+        /* ocupa a tela toda */
+        background-color: #110e0d;
+        box-shadow: 1px 0px 0px 0px #1a1a24;
+        padding-top: 1em;
+    }
+
+    .menu-item-text {
+        color: #e6e2ec;
+    }
+
+    .list-icon {
+        margin: 5px;
+        color: rgba(185, 28, 28, 0.9);
+    }
+
+    .list-group {
+        background: transparent;
+        /* tira fundo branco */
+        border: none;
+        /* remove bordas */
+    }
+
+    .list-group-item {
+        background: transparent;
+        /* remove fundo branco */
+        color: #ddd;
+        /* cor padrão do texto */
+        border: none;
+        /* remove borda */
+        transition: 0.3s, color 0.3s;
+    }
+
+    .list-group-item:hover {
+        background: rgba(185, 28, 28, 0.2);
+        /* efeito hover */
+        color: #fff;
+    }
+
+    .list-group-item.active {
+        background: #110e0d;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .hided {
+        display: none;
+    }
+
+    .menuHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* estado colapsado */
+    #menu.collapsed {
+        width: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* some os textos e título */
+    #menu.collapsed .menuTitle,
+    #menu.collapsed .menu-item-text {
+        display: none;
+    }
+
+    /* centralizar ícones quando colapsado */
+    #menu.collapsed .list-group-item a {
+        justify-content: center;
+    }
+
+    /* quando menu colapsa */
+    #menu.collapsed~#content {
+        margin-left: 5%;
+    }
+</style>
 
 <script type="module" src="/includes/fireBaseMethods.js" defer></script>
-<script type="module">
-    import { logOut } from "/includes/fireBaseMethods.js"
-    $(document).ready(function () {
-        $("#btnLogOut").on('click', function () {
-            logOut()
-        })
+
+<script>
+    $(document).on('click', '#toggleNav', function () {
+        $('#menu').toggleClass('collapsed');
     })
 </script>

@@ -13,3 +13,23 @@ scriptBootstrap.integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEu
 scriptBootstrap.crossOrigin = "anonymous";
 scriptBootstrap.defer = true;
 document.head.appendChild(scriptBootstrap);
+
+const scriptAos = document.createElement("script");
+scriptAos.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
+scriptAos.crossOrigin = "anonymous";
+scriptAos.defer = true;
+document.head.appendChild(scriptAos);
+
+// GSAP Core
+const scriptGSAP = document.createElement("script");
+scriptGSAP.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js";
+scriptGSAP.crossOrigin = "anonymous";
+scriptGSAP.defer = true;
+document.head.appendChild(scriptGSAP);
+
+// ScrollTrigger
+const scriptScrollTrigger = document.createElement("script");
+scriptScrollTrigger.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js";
+scriptScrollTrigger.crossOrigin = "anonymous";
+scriptScrollTrigger.defer = true;
+document.head.appendChild(scriptScrollTrigger);

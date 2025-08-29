@@ -56,39 +56,3 @@ function loader(parameter, texto) {
 }
 
 
-//Para fazer mostrar os itens da side nav Menu
-
-
-$(document).on('click', '.btnMenu', function () {
-
-    let item = $("#menu");
-    let textHidden = $(".nomeItemLista");
-    let itemLista = $(".listItem");
-    let menuTitle = $(".menuTitle");
-    let content = $("#content");
-    let listSeparator = $(".listSeparator");
-
-    if (menuStatus == false) {
-        listSeparator.show("fast");
-        item.addClass("openMenuSide");
-        itemLista.addClass("itemAlign")
-        textHidden.show("fast")
-        menuTitle.show("fast")
-        menuStatus = true
-        content.addClass("overlay")
-        return;
-    }
-    if (menuStatus == true) {
-        listSeparator.hide("fast");
-        item.removeClass("openMenuSide");
-        textHidden.hide("fast")
-        itemLista.removeClass("itemAlign");
-        menuTitle.hide("fast")
-        menuStatus = false;
-        content.removeClass("overlay")
-        return;
-    }
-
-})
-
-
