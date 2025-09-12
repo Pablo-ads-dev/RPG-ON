@@ -14,6 +14,7 @@ $(document).ready(function () {
             $(".imgSourceDiv").attr("src", url);
         }
     })
+    $(".select2").select2();
 
     $(document).on("keypress", "#nomeSessao", function () {
         let text = $(this).val();

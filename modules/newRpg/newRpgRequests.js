@@ -25,7 +25,7 @@ async function criaSessaoRpg(dados) {
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {
-                    redirectInicio();
+                    redirectHome();
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                     $("#formNovoRpg")[0].reset();
                 }
@@ -41,7 +41,7 @@ async function criaSessaoRpg(dados) {
     }
 }
 $(document).ready(function () {
-    verifyUserLogged();
+    // verifyUserLogged();
     $(document).on("submit", "#formNovoRpg", function (e) {
         e.preventDefault();
         let dados = $(this).serialize();

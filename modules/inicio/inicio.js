@@ -6,6 +6,10 @@ function toggleScrollbar() {
         panel.style.overflowX = 'auto';
     }
 }
+function redirectNewSession() {
+    location.href = "/modules/newRpg/newRpg.html"
+}
+
 $(document).ready(function () {
     incluirMenu("menu");
     toggleScrollbar();
@@ -40,13 +44,6 @@ $(document).ready(function () {
         $slider.scrollLeft(scrollLeft - walk);
     });
 
-    // Scroll com roda do mouse
-    $slider.on('wheel', function (e) {
-        e.preventDefault();
-        const delta = e.originalEvent.deltaY;
-        $slider.scrollLeft($slider.scrollLeft() + delta);
-    });
-
     gsap.to($slider, {
         scrollLeft: "+=100",
         duration: 0.5,
@@ -65,5 +62,12 @@ $(document).ready(function () {
 
     $(document).on("resize", ".panel-cards", function () {
         toggleScrollbar();
+    })
+
+    $(document).on("click", ".img-session", function () {
+        let source = $(this).attr("src");
+        console.log(source);
+        $("#modalImagem").modal('show')
+        $(".imgZoom").attr("src", source)
     })
 })

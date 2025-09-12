@@ -89,7 +89,7 @@ function buildCardSession(documents, type) {
 $(document).ready(function () {
     let text = "Buscando sessões..."
     loader(true, text)
-    verifyUserLogged()
+    // verifyUserLogged()
     setTimeout(() => {
         searchCreated()
         loader(false, text = "Buscando sessões...")

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/includes/global.css">
-    <link rel="stylesheet" href="/modules/novaConta/novaConta.css">
+    <link rel="stylesheet" href="/modules/newAccount/newAccount.css">
 
     <!-- Importacoes  -->
     <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
@@ -23,10 +23,10 @@
             <h3 class="m-0 titleColor fontApplied">RpgOn</h3>
             <!-- Links de navegação -->
             <div class="d-flex align-items-center optionsHeader" style="gap: 30px; margin-left: auto;">
-                <p class="subtitle m-0 anchorType">Campanhas</p>
-                <p class="subtitle m-0 anchorType ">Contato</p>
+                <p class="subtitle m-0 anchorType">Campaigns</p>
+                <p class="subtitle m-0 anchorType ">Support</p>
                 <button class="btn button-default-red anchorType" onclick="redirecLogin()">
-                    Registrar
+                    Login
                 </button>
             </div>
         </div>
@@ -38,35 +38,35 @@
                 <div class="divContainer">
                     <div class="col-md-12">
                         <div class="portlet-title d-flex justify-content-center mb-4">
-                            <h1 class="fontApplied loginTitleColor">Registrar na taverna</h1>
+                            <h1 class="fontApplied loginTitleColor">Join the guild</h1>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group mb-3">
-                            <label for="email" class="text-pattern">Nome de Usuário:</label>
-                            <div class="inputContainer">
+                            <label for="email" class="text-pattern">Username:</label>
+                            <div class="input-container">
                                 <i class="fa fa-user"></i>
-                                <input type="text" class="inputPersonalizado" id="username" autocomplete="off">
+                                <input type="text" class="personalized-input" id="username" autocomplete="off" placeholder="Ex: Vander the Light">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group mb-4 mt-1">
                             <label for="email" class="text-pattern">Email:</label>
-                            <div class="inputContainer">
+                            <div class="input-container">
                                 <i class="fa fa-envelope"></i>
-                                <input type="text" class="inputPersonalizado" id="email" autocomplete="off">
+                                <input type="text" class="personalized-input" id="email" autocomplete="off" placeholder="Your best email">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group mb-4 mt-1">
-                            <label for="email" class="text-pattern">Senha:</label>
-                            <div class="inputContainer">
+                            <label for="email" class="text-pattern">Password:</label>
+                            <div class="input-container">
                                 <i class="fa fa-lock-open"></i>
-                                <input type="password" class="inputPersonalizado" id="senha">
+                                <input type="password" class="personalized-input" id="password" placeholder="Spell a password!">
                                 <div class="input-group-append">
-                                    <button class="btn btn-dark closed btn-sm" id="btnMostrarSenha">
+                                    <button class="btn btn-dark closed btn-sm" id="showPassword">
                                         <i class="fa fa-eye-slash eyeIcon m-0"></i></button>
                                 </div>
                             </div>
@@ -74,16 +74,16 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="email" class="text-pattern">Confirmar Senha:</label>
-                            <div class="inputContainer">
+                            <label for="email" class="text-pattern">Confirm Password:</label>
+                            <div class="input-container">
                                 <i class=" fa fa-lock"></i>
-                                <input type="password" class="inputPersonalizado" id="senhaConfirm">
+                                <input type="password" class="personalized-input" id="passwordConfirm" placeholder="Spell it again!">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="d-flex justify-content-center mt-4">
-                            <button id="btnConfirmar" class="button-default-red-lg btn btn-lg anchorType">Criar Conta</button>
+                            <button id="btnConfirm" class="button-default-red-lg btn btn-lg anchorType">Create Account</button>
                         </div>
                     </div>
                 </div>
@@ -104,8 +104,8 @@
     <script src="/includes/funcoes.js" defer></script>
     <script type="module" src="/includes/fireBaseConfig.js" defer></script>
     <script type="module" src="/includes/fireBaseMethods.js"></script>
-    <script src="/modules/novaConta/novaConta.js" defer></script>
-    <script type="module" src="/modules/novaConta/novaContaRequests.js" defer></script>
+    <script src="/modules/newAccount/newAccount.js" defer></script>
+    <script type="module" src="/modules/newAccount/newAccountRequests.js" defer></script>
     <!-- importacoes -->
 
 </body>

@@ -3,14 +3,12 @@
 
 let menuStatus = false
 
-function showAlert(message) {
+function showAlert(title, message, type) {
     Swal.fire({
-        title: 'Informação!',
+        title: title,
         text: message,
-        icon: 'info',
+        icon: type,
     });
-    loader(false);
-    $("#loader").addClass("loader-hidden");
 }
 
 function incluirMenu(menu) {
@@ -22,15 +20,15 @@ function incluirMenu(menu) {
     })
 }
 
-function redirecCriarConta() {
-    window.location.href = "/modules/novaConta/novaConta.html";
+function redirecNewAccount() {
+    window.location.href = "/modules/newAccount/newAccount.html";
 }
 
 function redirecLogin() {
     window.location.href = "/modules/login/index.html";
 }
 
-function redirectInicio() {
+function redirectHome() {
     loader(true, text = "Aguarde...")
     setTimeout(() => {
         window.location.href = "/modules/inicio/inicio.html";

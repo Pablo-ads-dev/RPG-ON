@@ -33,3 +33,9 @@ scriptScrollTrigger.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Sc
 scriptScrollTrigger.crossOrigin = "anonymous";
 scriptScrollTrigger.defer = true;
 document.head.appendChild(scriptScrollTrigger);
+
+const select2Trigger = document.createElement("script");
+select2Trigger.src = "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js";
+select2Trigger.crossOrigin = "anonymous";
+select2Trigger.defer = true;
+document.head.appendChild(select2Trigger);

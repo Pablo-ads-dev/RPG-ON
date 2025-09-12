@@ -22,7 +22,6 @@
 </head>
 
 <body class="backgroundColor">
-
     <header id="headerStyle">
         <div class="HeaderJustification">
             <!-- Botão do menu com ícone -->
@@ -33,48 +32,49 @@
             <h3 class="m-0 titleColor fontApplied">RpgOn</h3>
             <!-- Links de navegação -->
             <div class="d-flex align-items-center optionsHeader" style="gap: 30px; margin-left: auto;">
-                <p class="subtitle m-0 anchorType">Campanhas</p>
-                <p class="subtitle m-0 anchorType ">Contato</p>
-                <button class="btn button-default-red anchorType" onclick="redirecLogin()">
-                    Registrar
+                <p class="subtitle m-0 anchorType">Campaings</p>
+                <p class="subtitle m-0 anchorType ">Support</p>
+                <button class="btn button-default-red anchorType" onclick="redirecNewAccount()">
+                    Register
                 </button>
             </div>
         </div>
     </header>
-
     <div id="container">
         <div class="portlet d-flex justify-content-center p-5">
             <div class="row">
                 <div class="divContainer">
                     <div class="col-md-12 text-center">
-                        <h1 class="fontApplied loginTitleColor bold">Portal Da Taverna</h1>
-                        <p class="text-pattern">Bem-Vindo de volta, aventureiro!!</p>
+                        <h1 class="fontApplied loginTitleColor bold">Tavern-Portal</h1>
+                        <p class="text-pattern bold">Welcome back adventurer</p>
                     </div>
                     <div class="col-md-12 mt-4">
                         <div class="form-group">
                             <label for="" class="text-pattern">Email</label>
-                            <div class="inputContainer">
+                            <div class="input-container">
                                 <i class="fa fa-user"></i>
-                                <input type="text" id="email" class="inputPersonalizado" autocomplete="off" />
+                                <input type="text" id="email" class="personalized-input" autocomplete="off"
+                                    placeholder="Your Email" />
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mt-4">
                         <div class="form-group">
-                            <label for="" class="text-pattern">Senha</label>
-                            <div class="inputContainer">
+                            <label for="" class="text-pattern">Password</label>
+                            <div class="input-container">
                                 <i class="fa fa-lock"></i>
-                                <input type="password" id="password" class="inputPersonalizado" autocomplete="off" />
+                                <input type="password" id="password" class="personalized-input" autocomplete="off"
+                                    placeholder="Your Password" />
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mt-4 text-center">
-                        <button class="button-default-red-lg btn anchorType" id="btnConfirmar">Confirmar</button>
+                        <button class="button-default-red-lg btn anchorType" id="btnConfirmar">Join</button>
                     </div>
                     <div class="col-md-12 text-center mt-3 d-flex justify-content-center">
                         <p class="text-pattern ">
-                            <span class="anchorType">Esqueceu a senha?</span> | <span class="anchorType"
-                                onclick="redirecCriarConta()"> Registrar-se na guilda </span>
+                            <span class="anchorType">Forgot your password?</span> | <span class="anchorType"
+                                onclick="redirecNewAccount()"> Join the guild </span>
                         </p>
                     </div>
                 </div>

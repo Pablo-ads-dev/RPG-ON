@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/includes/global.css">
     <link rel="stylesheet" href="/modules/newRpg/newRpg.css">
     <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Novo - RPG ON</title>
 </head>
 
@@ -18,94 +18,44 @@
         <div id="menu"></div>
 
         <div id="content">
-            <div class="portlet">
-                <div class="portlet-title">
-                    <h2 class="gradientTitle">Novo RPG</h2>
-                </div>
-                <div class="portlet-body border-portlet-padding">
-                    <form method="POST" id="formNovoRpg">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="col-md-10 mt-4">
-                                    <div class="form-group">
-                                        <label for="" class="label">Nome da Sessão</label>
-                                        <input type="text" name="nomeSessao" id="nomeSessao" required
-                                            class="form-control inputForm" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-md-10 mt-4">
-                                    <div class="form-group">
-                                        <label for="" class="label">Gênero</label>
-                                        <select name="genero" id="selectGender" required class="form-control inputForm">
-                                            <option value=""></option>
-                                            <option value="terror">Terror</option>
-                                            <option value="acao">Ação</option>
-                                            <option value="arena">Arena</option>
-                                            <option value="medieval">Medieval</option>
-                                            <option value="cp">Cyberpunk</option>
-                                            <option value="fantasia">Fantasia</option>
-                                            <option value="ficcao-cientifica">Ficção Científica</option>
-                                            <option value="steampunk">Steampunk</option>
-                                            <option value="pós-apocaliptico">Pós-apocalíptico</option>
-                                            <option value="super-herois">Super-Heróis</option>
-                                            <option value="misterio">Mistério</option>
-                                            <option value="horror-lovecraftiano">Horror Lovecraftiano</option>
-                                            <option value="guerra">Guerra</option>
-                                            <option value="sobrevivencia">Sobrevivência</option>
-                                            <option value="western">Western</option>
-                                            <option value="mitologico">Mitológico</option>
-                                            <option value="dark-fantasy">Dark Fantasy</option>
-                                            <option value="piratas">Piratas</option>
-                                            <option value="zumbis">Zumbis</option>
-                                            <option value="espionagem">Espionagem</option>
-                                            <option value="samurai">Samurai</option>
-                                            <option value="viking">Viking</option>
-                                            <option value="dungeon-crawler">Dungeon Crawler</option>
-                                            <option value="mecha">Mecha</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-10 mt-4">
-                                    <div class="form-group">
-                                        <label for="" class="label">Quantidade de Jogadores</label>
-                                        <select name="selectJogadores" required id="selectJogadores"
-                                            class="form-control inputForm">]
-                                            <option value=""></option>
-                                            <option value="4">4 Jogadores</option>
-                                            <option value="6">6 Jogadores</option>
-                                            <option value="8">8 Jogadores</option>
-                                            <option value="10">10 Jogadores</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Segunda parte do HTML -->
-
-                            <div class="col-md-6">
-                                <div class="col-md-12 mt-4 d-flex justify-content-center ">
-                                    <img src="/src/img/noImage-removebg-preview.png" class="imgSourceDiv">
-                                    </img>
-                                </div>
-                                <div class="col-md-12 mt-4">
-                                    <label for="" class="label">URL da imagem</label>
-                                    <div class="input-group">
-                                        <input type="text" value="" name="urlImg" id="urlImg"
-                                            class="form-control inputForm" autocomplete="off">
-                                        <div class="input-group-btn">
-                                            <button type="button" class="btn closed" id="btnAdd"><i
-                                                    class="fa fa-check eyeIcon"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" divBtns col-md-12 mt-5 d-flex justify-content-end">
-                                    <button type="button" class="btnRefazer btnPattern btn">Refazer <i
-                                            class="fa fa-refresh"></i></button>
-                                    <button class="btnFinalizar btnPattern btn" form="formNovoRpg">Finalizar</button>
-                                </div>
-                            </div>
+            <div class="d-flex justify-content-between mb-3">
+                <h2 class="sessionTitle fontApplied m-0">Create a New Session
+                </h2>
+            </div>
+            <hr>
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="text-pattern">Session Name:</label>
+                        <div class="input-container">
+                            <i class="fa fa-bookmark"></i>
+                            <input type="text" class="personalized-input" id="sessionName" autocomplete="off"
+                                maxlength="30" minlength="3" required>
                         </div>
-                    </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="text-pattern">System</label>
+                        <div class="input-container">
+                            <i class="fa fa-gear"></i>
+                            <select type="text" name="system" class="personalized-select form-select" id="systemSelect"
+                                autocomplete="off">
+                                <option value="dd" class="personalized-option">Dungeons & Dragons</option>
+                                <option value="torment" class="personalized-option">Torment</option>
+                                <option value="coc" class="personalized-option">Call Of Cthulhu</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="text-pattern">Number of Players</label>
+                        <div class="input-container">
+                            <i class="fa fa-users"></i>
+                            <input type="text" name="playersNumber" id="playersNumber" class="personalized-input" max="8" min="1">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,4 +80,5 @@
     <script type="module" src="/includes/fireBaseMethods.js" defer></script>
     <script type="module" src="/modules/newRpg/newRpgRequests.js" defer></script>
 </body>
+
 </html>
