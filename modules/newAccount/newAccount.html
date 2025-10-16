@@ -9,7 +9,7 @@
 
     <!-- Importacoes  -->
     <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
-    <title>Criar Conta</title>
+    <title>New Account</title>
 </head>
 
 <body>
@@ -34,60 +34,68 @@
 
     <div id="container">
         <div class="portlet d-flex justify-content-center p-5">
-            <div class="row">
-                <div class="divContainer">
-                    <div class="col-md-12">
-                        <div class="portlet-title d-flex justify-content-center mb-4">
-                            <h1 class="fontApplied loginTitleColor">Join the guild</h1>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group mb-3">
-                            <label for="email" class="text-pattern">Username:</label>
-                            <div class="input-container">
-                                <i class="fa fa-user"></i>
-                                <input type="text" class="personalized-input" id="username" autocomplete="off" placeholder="Ex: Vander the Light">
+            <form action="" id="formNewAccount">
+                <div class="row">
+                    <div class="divContainer">
+                        <div class="col-md-12">
+                            <div class="portlet-title d-flex justify-content-center mb-4">
+                                <h1 class="fontApplied loginTitleColor">Join the guild</h1>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group mb-4 mt-1">
-                            <label for="email" class="text-pattern">Email:</label>
-                            <div class="input-container">
-                                <i class="fa fa-envelope"></i>
-                                <input type="text" class="personalized-input" id="email" autocomplete="off" placeholder="Your best email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group mb-4 mt-1">
-                            <label for="email" class="text-pattern">Password:</label>
-                            <div class="input-container">
-                                <i class="fa fa-lock-open"></i>
-                                <input type="password" class="personalized-input" id="password" placeholder="Spell a password!">
-                                <div class="input-group-append">
-                                    <button class="btn btn-dark closed btn-sm" id="showPassword">
-                                        <i class="fa fa-eye-slash eyeIcon m-0"></i></button>
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="email" class="text-pattern">Username:</label>
+                                <div class="input-container">
+                                    <i class="fa fa-user"></i>
+                                    <input name="username" type="text" class="personalized-input" id="username"
+                                        autocomplete="off" placeholder="Ex: Vander the Light">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="email" class="text-pattern">Confirm Password:</label>
-                            <div class="input-container">
-                                <i class=" fa fa-lock"></i>
-                                <input type="password" class="personalized-input" id="passwordConfirm" placeholder="Spell it again!">
+                        <div class="col-md-12">
+                            <div class="form-group mb-4 mt-1">
+                                <label for="email" class="text-pattern">Email:</label>
+                                <div class="input-container">
+                                    <i class="fa fa-envelope"></i>
+                                    <input name="email" type="text" class="personalized-input" id="email"
+                                        autocomplete="off" placeholder="Your best email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group mb-4 mt-1">
+                                <label for="email" class="text-pattern">Password:</label>
+                                <div class="input-container">
+                                    <i class="fa fa-lock-open"></i>
+                                    <input name="password" type="password" class="personalized-input" id="password"
+                                        placeholder="Spell a password!">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-dark closed btn-sm" id="showPassword">
+                                            <i class="fa fa-eye-slash eyeIcon m-0"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="email" class="text-pattern">Confirm Password:</label>
+                                <div class="input-container">
+                                    <i class=" fa fa-lock"></i>
+                                    <input type="password" class="personalized-input" id="passwordConfirm"
+                                        placeholder="Spell it again!">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" id="btnConfirm"
+                                    class="button-default-red-lg btn btn-lg anchorType">Create
+                                    Account</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="d-flex justify-content-center mt-4">
-                            <button id="btnConfirm" class="button-default-red-lg btn btn-lg anchorType">Create Account</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -102,10 +110,7 @@
 
     <!-- importacoes -->
     <script src="/includes/funcoes.js" defer></script>
-    <script type="module" src="/includes/fireBaseConfig.js" defer></script>
-    <script type="module" src="/includes/fireBaseMethods.js"></script>
     <script src="/modules/newAccount/newAccount.js" defer></script>
-    <script type="module" src="/modules/newAccount/newAccountRequests.js" defer></script>
     <!-- importacoes -->
 
 </body>

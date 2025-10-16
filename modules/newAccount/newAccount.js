@@ -1,4 +1,19 @@
 
+async function verifyUserExist(email) {
+    try {
+        const response = await $.ajax({
+            type: "GET",
+            url: `http://localhost:3000/api/users/by-email?email=${encodeURIComponent(email)}`, // o email vai no path
+            contentType: "application/json"
+        });
+        return !!response.user;
+    } catch (err) {
+        if (err.status === 404) return false;
+        console.log("error on verify function " + err);
+    }
+
+}
+
 function validate(value, typeValidation) {
     let valido = false;
 
@@ -20,7 +35,7 @@ function validate(value, typeValidation) {
             let clean = value.replace(/[^\w]/g, '');
             if (clean !== raw) {
                 showAlert('Attention', 'We cleaned the special characters of the Username', 'warning');
-                $user.val(clean);
+                $("#username").val(clean);
             }
             valido = clean.length >= 3;
             if (!valido) {
@@ -87,8 +102,29 @@ function generateRandomPlaceholder() {
     $("#username").attr("placeholder", randomPlaceholder);
 }
 
+function createNewUser(email, password, name, codtype) {
+    $.ajax({
+        url: "http://localhost:3000/api/users/",
+        type: "POST",
+        contentType: 'application/json', // envia em formato JSON
+        data: JSON.stringify({ email, password, name, codtype }), // corpo da requisição
+        success: function (response) {
+            showAlert('Success', 'User created!', 'success');
+        },
+        error: function (xhr) {
+            if (xhr.responseJSON && xhr.responseJSON.erro) {
+                alert('Erro: ' + xhr.responseJSON.erro);
+            } else {
+                alert('Erro inesperado no servidor.');
+            }
+        }
+
+    })
+}
+
 
 $(document).ready(function () {
+    generateRandomPlaceholder();
 
     $("#showPassword").click(function () {
         let inputSenha = $("#password")
@@ -104,16 +140,25 @@ $(document).ready(function () {
         }
     })
 
-    generateRandomPlaceholder();
+    $("#username").blur(function () {
+        let value = $(this).val();
+        let clean = value.replace(/[^\w]/g, '');
+        $(this).val(clean)
+    });
 
-    $("#btnConfirm").click(function () {
-        let email = $("#email").val().trim();
-        let password = $("#password").val().trim();
-        let passwordConfirm = $('#passwordConfirm').val().trim();
-        let usuario = $("#username").val().trim();
-        if (verifyFields(email, password, passwordConfirm, usuario) == false) {
+    $("#btnConfirm").click(async function () {
+        const email = $("#email").val().trim();
+        const password = $("#password").val().trim();
+        const passwordConfirm = $('#passwordConfirm').val().trim();
+        const username = $("#username").val().trim();
+        if (verifyFields(email, password, passwordConfirm, username) == false) {
             return;
         }
-        authenticateCredentials(email, senha);
-    })
+        const exists = await verifyUserExist(email);
+        if (!exists) {
+            createNewUser(email, password, username, 2);
+        } else {
+            showAlert("Attention", "The email is already in use", "warning")
+        }
+    });
 })

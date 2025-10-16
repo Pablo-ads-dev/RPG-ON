@@ -65,11 +65,15 @@
                                 <i class="fa fa-lock"></i>
                                 <input type="password" id="password" class="personalized-input" autocomplete="off"
                                     placeholder="Your Password" />
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-dark closed btn-sm" id="showPassword">
+                                        <i class="fa fa-eye-slash eyeIcon m-0"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mt-4 text-center">
-                        <button class="button-default-red-lg btn anchorType" id="btnConfirmar">Join</button>
+                        <button class="button-default-red-lg btn anchorType" id="btnConfirm">Join</button>
                     </div>
                     <div class="col-md-12 text-center mt-3 d-flex justify-content-center">
                         <p class="text-pattern ">
@@ -98,7 +102,6 @@
 
     <script src="/modules/login/index.js" defer></script>
     <script src="/includes/funcoes.js" defer></script>
-    <script type="module" src="/modules/login/indexRequests.js" defer></script>
 </body>
 
 </html>

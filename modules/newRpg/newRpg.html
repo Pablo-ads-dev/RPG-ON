@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/modules/newRpg/newRpg.css">
     <link rel="icon" sizes="16x16" href="/src/favIcon/favicon-16x16.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <title>Novo - RPG ON</title>
+    <title>New Session - RPG ON</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <div class="row ">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="email" class="text-pattern">Session Name:</label>
+                        <label for="sessionName" class="text-pattern">Session Name:</label>
                         <div class="input-container">
                             <i class="fa fa-bookmark"></i>
                             <input type="text" class="personalized-input" id="sessionName" autocomplete="off"
@@ -36,26 +36,77 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="email" class="text-pattern">System</label>
+                        <label for="systemSelect" class="text-pattern">System</label>
                         <div class="input-container">
                             <i class="fa fa-gear"></i>
                             <select type="text" name="system" class="personalized-select form-select" id="systemSelect"
                                 autocomplete="off">
-                                <option value="dd" class="personalized-option">Dungeons & Dragons</option>
-                                <option value="torment" class="personalized-option">Torment</option>
-                                <option value="coc" class="personalized-option">Call Of Cthulhu</option>
+                                <option value="1" class="personalized-option">Dungeons & Dragons</option>
+                                <option value="2" class="personalized-option">Torment</option>
+                                <option value="3" class="personalized-option">Call Of Cthulhu</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group">
-                        <label for="email" class="text-pattern">Number of Players</label>
+                        <label for="" class="text-pattern">Number of Players</label>
                         <div class="input-container">
                             <i class="fa fa-users"></i>
-                            <input type="text" name="playersNumber" id="playersNumber" class="personalized-input" max="8" min="1">
+                            <input type="number" name="playersNumber" id="playersNumber" class="personalized-input"
+                                autocomplete="off" max="8" min="1">
                         </div>
                     </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="genderSelect" class="text-pattern">Genders</label>
+                        <div class="input-container">
+                            <i class="fa fa-list"></i>
+                            <select name="genders[]" class="personalized-select select2 select-form" multiple
+                                id="genderSelect">
+                                <option value="action" class="personalized-option">Action</option>
+                                <option value="adventure" class="personalized-option">Adventure</option>
+                                <option value="strategy" class="personalized-option">Strategy</option>
+                                <option value="fantasy" class="personalized-option">Fantasy</option>
+                                <option value="scifi" class="personalized-option">Science Fiction</option>
+                                <option value="horror" class="personalized-option">Horror</option>
+                                <option value="medieval" class="personalized-option">Medieval</option>
+                                <option value="cyberpunk" class="personalized-option">Cyberpunk</option>
+                                <option value="steampunk" class="personalized-option">Steampunk</option>
+                                <option value="superhero" class="personalized-option">Superheroes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="text-pattern">Closed Session</label>
+                        <div class="input-container">
+                            <i class="fa fa-gear"></i>
+                            <select type="text" name="playersNumber" id="playersNumber"
+                                class="personalized-select form-select">
+                                <option value="1" class="personalized-option">Yes</option>
+                                <option value="2" class="personalized-option">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="text-pattern">Plataform/Location</label>
+                        <div class="input-container">
+                            <i class="fa fa-map-marker"></i>
+                            <select type="text" name="playersNumber" id="playersNumber"
+                                class="personalized-select form-select">
+                                <option value="1" class="personalized-option">Presential</option>
+                                <option value="2" class="personalized-option">Online</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-grid p-4">
+                    <button class="btn block button-default-red">Create Session</button>
                 </div>
             </div>
         </div>

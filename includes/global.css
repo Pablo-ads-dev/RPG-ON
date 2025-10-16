@@ -118,6 +118,23 @@ ESTILIZAÇÃO CONTENT */
     font-size: 35px;
 }
 
+/* sobrescreve autofill Chrome/Opera */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgba(17, 17, 17, 0.8) inset !important;
+    /* cor atrás do input */
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff !important;
+    border-radius: 4px;
+    /* igual ao input normal */
+    background-color: rgba(15, 15, 15, 0.90);
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px rgba(17, 17, 17, 0.8) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    background-color: rgba(15, 15, 15, 0.90);
+}
+
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -511,10 +528,52 @@ INPUTS E LABELS */
     padding-right: 5px !important;
     position: relative !important;
 }
-.select2-selection__choice{
+
+.select2-selection__choice {
     padding: 0px;
     margin: 0px;
 }
-.form-group{
+
+.form-group {
     margin-bottom: 20px;
+}
+
+/* fundo do campo principal */
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent !important;
+    /* ou a cor desejada */
+    color: #fff !important;
+    border-color: #333;
+}
+
+/* fundo da lista dropdown */
+.select2-container--default .select2-results>.select2-results__options {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+/* cor ao passar o mouse */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #2e2e2e !important;
+    color: #fff !important;
+}
+
+/* itens selecionados (tags) */
+.select2-container--default .select2-selection__choice {
+    background-color: #2e2e2e !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #202020 !important;
+    /* ou a cor desejada */
+    color: #fff !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: #161616 !important;
+}
+.select2-container--default .select2-search--inline .select2-search__field{
+    color:#fff
 }
