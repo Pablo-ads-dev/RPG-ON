@@ -23,12 +23,16 @@ function login(email, password) {
         success: function (response) {
             Swal.fire({
                 title: 'Success!',
-                text: 'Welcome back ' + response.user.usu_name,
+                text: 'Welcome back ' + response.user,
                 icon: 'success',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "/modules/inicio/inicio.html";
+                }
             })
 
         }, error: function (error) {
-
+            console.log(error);
         }
     })
 

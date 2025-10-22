@@ -109,7 +109,16 @@ function createNewUser(email, password, name, codtype) {
         contentType: 'application/json', // envia em formato JSON
         data: JSON.stringify({ email, password, name, codtype }), // corpo da requisição
         success: function (response) {
-            showAlert('Success', 'User created!', 'success');
+            Swal.fire({
+                title: "Success",
+                text: "User created!",
+                icon: "success",
+                showConfirmButton: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "/modules/login";
+                }
+            });
         },
         error: function (xhr) {
             if (xhr.responseJSON && xhr.responseJSON.erro) {
